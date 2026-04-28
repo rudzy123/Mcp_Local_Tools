@@ -10,3 +10,9 @@ Minimal MCP server exposing a simple tool over stdio.
 
 This project demonstrates MCP server setup and will be extended with
 filesystem tools and agent integration.
+
+## MCP Transport Note
+
+The MCP server runs over stdio using the official runtime.
+The agent demonstrates tool orchestration logic directly to avoid
+re-implementing MCP wire framing, which is still evolving.
