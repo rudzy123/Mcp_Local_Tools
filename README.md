@@ -103,7 +103,8 @@ This reflects real‑world engineering judgment when working with evolving stand
 Start the MCP server:
 bash
 python -m server.mcp_server
-Run the agent workflow:
+
+# How to Run the agent workflow:
 python -m agent.agent_client
 
 Future Extensions
