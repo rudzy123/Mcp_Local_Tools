@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-tools-mcp"
+version = "2.0.0"
+description = "Capability-sandboxed, typed MCP server for read-only local documents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-NC-ND-4.0" }
+dependencies = [
+    "mcp>=2.3.0,<3",
+    "pydantic>=2.12",
+    "anyio>=4.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2"]
+
+[project.scripts]
+local-tools = "localtools.server:main"
+
+[tool.setuptools.packages.find]
+include = ["localtools*", "agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
